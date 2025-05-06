@@ -1,0 +1,136 @@
+{
+  "name": "Bagus-Api UI",
+  "version": "v1.0.0",
+  "description": "Simple and easy to use API.",
+  "bannerImage": "/src/banner.jpg",
+  "header": {
+    "status": "Online!"
+  },
+  "apiSettings": {
+    "creator": "BagusErlangga", 
+    "apikey": ["bagus-api"]
+  },
+  "categories": [
+    {
+      "name": "AI",
+      "items": [
+        {
+          "name": "LuminAI",
+          "desc": "Talk with LuminAI",
+          "path": "/ai/luminai?text=",
+          "status": "ready",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "HydroMind",
+          "desc": "HydroMind AI Chatbot",
+          "path": "/ai/hydromind?text=&model=",
+          "status": "ready",
+          "params": { "text": "Text prompt", "model": "Model name" }
+        },
+        {
+          "name": "DeepSeek",
+          "desc": "Talk with DeepSeek AI",
+          "path": "/ai/deepseek?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "ChatGPT",
+          "desc": "OpenAI ChatGPT model",
+          "path": "/ai/chatgpt?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "Gemini",
+          "desc": "Google Gemini Chat",
+          "path": "/ai/gemini?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "Claude",
+          "desc": "Claude AI model by Anthropic",
+          "path": "/ai/claude?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "Mistral",
+          "desc": "Mistral AI conversation",
+          "path": "/ai/mistral?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        },
+        {
+          "name": "LLaMA",
+          "desc": "Meta LLaMA model",
+          "path": "/ai/llama?text=",
+          "status": "error",
+          "params": { "text": "Text prompt" }
+        }
+      ]
+    },
+    {
+      "name": "Random",
+      "items": [
+        { "name": "Blue Archive", "desc": "Random BA girl", "path": "/random/ba", "status": "ready" },
+        { "name": "Waifu", "desc": "Random waifu", "path": "/random/waifu", "status": "error" },
+        { "name": "Loli", "desc": "Random loli image", "path": "/random/loli", "status": "error" },
+        { "name": "Meme", "desc": "Random meme", "path": "/random/meme", "status": "error" },
+        { "name": "Kucing", "desc": "Random cat image", "path": "/random/cat", "status": "error" },
+        { "name": "Anjing", "desc": "Random dog image", "path": "/random/dog", "status": "error" },
+        { "name": "Wallpaper Anime", "desc": "Anime wallpapers", "path": "/random/wpanime", "status": "error" },
+        { "name": "Fox", "desc": "Random fox image", "path": "/random/fox", "status": "error" },
+        { "name": "Quotes", "desc": "Random quotes", "path": "/random/quotes", "status": "error" },
+        { "name": "Art", "desc": "Random AI art", "path": "/random/art", "status": "error" }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "items": [
+        { "name": "YouTube", "desc": "Search YouTube videos", "path": "/search/youtube?q=", "status": "ready", "params": { "q": "Query" } },
+        { "name": "Google", "desc": "Search Google", "path": "/search/google?q=", "status": "error", "params": { "q": "Query" } },
+        { "name": "Anime", "desc": "Anime info lookup", "path": "/search/anime?q=", "status": "error", "params": { "q": "Anime title" } },
+        { "name": "Manga", "desc": "Search manga info", "path": "/search/manga?q=", "status": "error", "params": { "q": "Manga title" } },
+        { "name": "Lyrics", "desc": "Search song lyrics", "path": "/search/lyrics?q=", "status": "error", "params": { "q": "Song title" } },
+        { "name": "GitHub", "desc": "Search GitHub repositories", "path": "/search/github?q=", "status": "error", "params": { "q": "Keyword" } },
+        { "name": "Weather", "desc": "Search weather info", "path": "/search/weather?city=", "status": "error", "params": { "city": "City name" } },
+        { "name": "Movies", "desc": "Search movie info", "path": "/search/movies?q=", "status": "error", "params": { "q": "Movie title" } },
+        { "name": "News", "desc": "Search latest news", "path": "/search/news?q=", "status": "error", "params": { "q": "Keyword" } },
+        { "name": "Wikipedia", "desc": "Search Wikipedia", "path": "/search/wiki?q=", "status": "error", "params": { "q": "Topic" } }
+      ]
+    },
+    {
+      "name": "Downloader",
+      "items": [
+        { "name": "TikTok", "desc": "Download TikTok video", "path": "/downloader/tiktok?url=", "status": "error", "params": { "url": "TikTok URL" } },
+        { "name": "YouTube", "desc": "Download YouTube video", "path": "/downloader/youtube?url=", "status": "error", "params": { "url": "YouTube URL" } },
+        { "name": "Instagram", "desc": "Download IG photo/reel", "path": "/downloader/instagram?url=", "status": "error", "params": { "url": "Instagram URL" } },
+        { "name": "Facebook", "desc": "Download Facebook video", "path": "/downloader/facebook?url=", "status": "error", "params": { "url": "FB URL" } },
+        { "name": "Twitter", "desc": "Download Twitter/X video", "path": "/downloader/twitter?url=", "status": "error", "params": { "url": "Twitter URL" } },
+        { "name": "Pinterest", "desc": "Download Pinterest media", "path": "/downloader/pinterest?url=", "status": "error", "params": { "url": "Pinterest URL" } },
+        { "name": "Likee", "desc": "Download Likee video", "path": "/downloader/likee?url=", "status": "error", "params": { "url": "Likee URL" } },
+        { "name": "Snapchat", "desc": "Download Snapchat media", "path": "/downloader/snapchat?url=", "status": "error", "params": { "url": "Snap URL" } },
+        { "name": "SoundCloud", "desc": "Download SoundCloud audio", "path": "/downloader/soundcloud?url=", "status": "error", "params": { "url": "SoundCloud URL" } },
+        { "name": "Spotify", "desc": "Download Spotify music", "path": "/downloader/spotify?url=", "status": "error", "params": { "url": "Spotify URL" } }
+      ]
+    },
+    {
+      "name": "Fun",
+      "items": [
+        { "name": "Fake Chat", "desc": "Fake WhatsApp chat", "path": "/fun/fakechat?name=&message=", "status": "error", "params": { "name": "Sender", "message": "Text" } },
+        { "name": "Nulis", "desc": "Tulisan tangan otomatis", "path": "/fun/nulis?text=", "status": "error", "params": { "text": "Text to write" } },
+        { "name": "Alay", "desc": "Text to alay style", "path": "/fun/alay?text=", "status": "error", "params": { "text": "Normal text" } },
+        { "name": "Math Joke", "desc": "Random math jokes", "path": "/fun/joke?type=math", "status": "error" },
+        { "name": "Dark Joke", "desc": "Random dark jokes", "path": "/fun/joke?type=dark", "status": "error" },
+        { "name": "Tebak Gambar", "desc": "Tebak gambar game", "path": "/fun/tebakgambar", "status": "error" },
+        { "name": "Fakta Unik", "desc": "Fakta unik random", "path": "/fun/fakta", "status": "error" },
+        { "name": "Tebak Kata", "desc": "Game tebak kata", "path": "/fun/tebakkata", "status": "error" },
+        { "name": "Emoji Mix", "desc": "Gabungkan emoji", "path": "/fun/emojimix?emoji1=&emoji2=", "status": "error", "params": { "emoji1": "😊", "emoji2": "🔥" } },
+        { "name": "Truth or Dare", "desc": "Main truth or dare", "path": "/fun/tod", "status": "error" }
+      ]
+    }
+  ]
+}

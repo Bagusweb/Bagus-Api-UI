@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/icon.png" type="image/png">
+    <meta name="description" content="The BagusWeb project makes Simple and easy to use API">
+    <meta name="keywords" content="BagusWeb API, Falcon API">
+    <meta property="og:url" content="https://bagus-api.vercel.app" />
+    <meta property="og:title" content="Bagus API - Simple and easy API" />
+    <meta property="og:image" content="/src/banner.jpg"/>
+    <title id="page"></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <p>Loading<span class="loading-dots">...</span></p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggleBtn" class="btn" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span id="header"></span>
+                <div id="versionHeader"></div>
+            </a>
+            <div class="nav-actions">
+                <a href="https://github.com/bagusweb" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <div class="hero-container">
+            <div class="hero-bg-animation">
+                <div class="hero-bg-circle"></div>
+                <div class="hero-bg-circle"></div>
+                <div class="hero-bg-circle"></div>
+            </div>
+            
+            <div id="nameContainer">
+                <h1 id="name"></h1>
+                <div id="version"></div>
+            </div>
+            <p id="description" class="lead"></p>
+            <div id="apiLinks" class="mb-4"></div>
+            <!--<img id="dynamicImage" class="banner" src="/api/src/banner.jpg" alt="API Banner"> -->
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <input type="text" id="searchInput" class="form-control" placeholder="Search API...">
+                <button class="clear-search" id="clearSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- API Content -->
+        <div class="tab-content" id="apiContent"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div id="wm"></div>
+                <div class="footer-links">
+                    <a href="https://github.com/bagusweb" class="footer-link">Info</a>
+                    <a href="https://wa.me/628567325691" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- API Response Modal -->
+    <div class="modal fade" id="apiResponseModal" tabindex="-1" aria-labelledby="apiResponseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" id="modalDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="apiResponseModalLabel"></h5>
+                        <p class="modal-desc mb-0" id="apiResponseModalDesc"></p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="endpoint-container">
+                        <div class="endpoint-label">
+                            <span>Endpoint</span>
+                            <button class="copy-btn" id="copyEndpoint" title="Copy to clipboard">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre id="apiEndpoint"></pre>
+                    </div>
+                    <div id="apiQueryInputContainer"></div>
+                    <div id="apiResponseLoading" class="d-none">
+                        <div class="spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+                        <p>Processing request...</p>
+                    </div>
+                    <div class="response-container d-none" id="responseContainer">
+                        <div class="response-label">
+                            <span>Response</span>
+                            <button class="copy-btn" id="copyResponse" title="Copy to clipboard">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre id="apiResponseContent" class="d-none"></pre>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submitQueryBtn" class="btn">
+                        <span>Submit</span>
+                        <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

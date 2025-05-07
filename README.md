@@ -2,8 +2,6 @@
 
 A modern, clean, and user-friendly interface for browsing and testing Bagus API endpoints.
 
-![Bagus API UI Screenshot](image.png)
-
 ## Features
 
 - 🌓 **Light/Dark Mode**: Toggle between light and dark themes with automatic preference saving
